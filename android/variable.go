@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"Aosp/soong/android"
+	"starlight/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -134,8 +134,8 @@ type variableProperties struct {
 			Exclude_srcs []string `android:"arch_variant"`
 		} `android:"arch_variant"`
 	} `android:"arch_variant"`
-	// include Aosp variables
-	Aosp android.Product_variables
+	// include Aosp-Starlight variables
+	Starlight android.Product_variables
 }
 
 var defaultProductVariables interface{} = variableProperties{}
@@ -341,8 +341,8 @@ type productVariables struct {
 
 	BoardUsesRecoveryAsBoot *bool `json:",omitempty"`
 
-	// include Aosp variables
-	Aosp android.ProductVariables
+	// include Aosp-Starlight variables
+	Starlight android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
